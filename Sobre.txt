@@ -1,0 +1,3 @@
+Sobre
+
+Contém um pacote Nuget para utilização do sqlite e as devidas chamadas no StudentDataStore.
