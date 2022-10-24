@@ -1,8 +1,8 @@
 # CRUD de alunos com SQLite
-CRUD básico de alunos desenvolvido em .NET Xamarin com banco SQLite.
+CRUD básico de alunos desenvolvido em .NET Xamarin Forms com banco SQLite.
 
 ## Description
-O projeto contém um CRUD de alunos desenvolvido em .NET Xamarin com DataBinding, design MVVM e banco SQLite.
+O projeto contém um CRUD de alunos desenvolvido em .NET Xamarin Forms com DataBinding, design MVVM e banco SQLite.
 
 ## Installation
 - Baixar e instalar o Visual Studio (caso não tenha);
