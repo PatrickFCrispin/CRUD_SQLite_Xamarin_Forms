@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xrHAfoASofefbwLQusYP24NvC/BLnV+O1ORr5FL9JIMIGQM1O2TAMm7OR9za30qwtkXT1otI+GQhDKYNjL9Q3Q==",
+  "dgSpecHash": "5fIUBghybkOHl8kf1XBNneAxs7TTGc+7jcIfD9sikRPOHbTqTHnR9jf98oKti0SNZLz9j8mpfdvwnyP+ixfY7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Patri\\teste\\StudentCrudWithSQLite\\StudentCrudWithSQLite.Android\\StudentCrudWithSQLite.Android.csproj",
+  "projectFilePath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.Android\\StudentCrudWithSQLite.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Patri\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\Patri\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

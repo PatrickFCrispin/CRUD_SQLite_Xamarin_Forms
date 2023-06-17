@@ -15,8 +15,7 @@ namespace StudentCrudWithSQLite.ViewModels
             LoadItemsCommand = new Command(async () => await LoadStudentByAsync(Id));
             CancelCommand = new Command(async () => await GoToRouteAsync($"//{nameof(StudentListPage)}"));
             SaveCommand = new Command(async () => await OnSaveAsync(), ValidateSave);
-            PropertyChanged +=
-                (_, __) => SaveCommand.ChangeCanExecute();
+            PropertyChanged += (_, __) => SaveCommand.ChangeCanExecute();
             BackCommand = new Command(async () => await GoToRouteAsync($"{nameof(StudentDetailPage)}?{nameof(Id)}={Id}"));
         }
 

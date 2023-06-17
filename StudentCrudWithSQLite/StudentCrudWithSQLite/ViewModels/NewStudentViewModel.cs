@@ -13,8 +13,7 @@ namespace StudentCrudWithSQLite.ViewModels
             Title = "Novo aluno";
             CancelCommand = new Command(async () => await GoToRouteAsync($"//{nameof(StudentListPage)}"));
             SaveCommand = new Command(async () => await OnSaveAsync(), ValidateSave);
-            PropertyChanged +=
-                (_, __) => SaveCommand.ChangeCanExecute();
+            PropertyChanged += (_, __) => SaveCommand.ChangeCanExecute();
         }
 
         private async Task OnSaveAsync()

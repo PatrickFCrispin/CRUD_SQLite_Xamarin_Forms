@@ -3665,11 +3665,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Patri\\teste\\StudentCrudWithSQLite\\StudentCrudWithSQLite.Android\\StudentCrudWithSQLite.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.Android\\StudentCrudWithSQLite.Android.csproj",
       "projectName": "StudentCrudWithSQLite.Android",
-      "projectPath": "C:\\Users\\Patri\\teste\\StudentCrudWithSQLite\\StudentCrudWithSQLite.Android\\StudentCrudWithSQLite.Android.csproj",
+      "projectPath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.Android\\StudentCrudWithSQLite.Android.csproj",
       "packagesPath": "C:\\Users\\Patri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Patri\\teste\\StudentCrudWithSQLite\\StudentCrudWithSQLite.Android\\obj\\",
+      "outputPath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3691,8 +3691,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "C:\\Users\\Patri\\teste\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj": {
-              "projectPath": "C:\\Users\\Patri\\teste\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj"
+            "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj": {
+              "projectPath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj"
             }
           }
         }
