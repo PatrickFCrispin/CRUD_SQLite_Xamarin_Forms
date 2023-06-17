@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:StudentCrudWithSQLite.ViewModels"
+             x:DataType="viewmodels:StudentDetailViewModel"
+             x:Class="StudentCrudWithSQLite.Views.StudentDetailPage"
+             Title="{Binding Title}">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding BackCommand}" />
+    </Shell.BackButtonBehavior>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10">
+            <Label Text="Nome" FontSize="Medium" />
+            <Label Text="{Binding Name}" FontSize="Small" />
+            <Label Text="E-mail" FontSize="Medium" />
+            <Label Text="{Binding Email}" FontSize="Small" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Remover" Command="{Binding RemoveCommand}" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource RedColor}" />
+                <Button Text="Editar" Command="{Binding EditCommand}" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

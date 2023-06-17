@@ -1,0 +1,64 @@
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\bin\Debug\netstandard2.0\StudentCrudWithSQLite.deps.json
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\bin\Debug\netstandard2.0\StudentCrudWithSQLite.dll
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\bin\Debug\netstandard2.0\StudentCrudWithSQLite.pdb
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.csproj.AssemblyReference.cache
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\EditStudentPage.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\NewStudentPage.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\StudentDetailPage.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\StudentListPage.xaml.g.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.AssemblyInfoInputs.cache
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.AssemblyInfo.cs
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.csproj.CoreCompileInputs.cache
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.dll
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\refint\StudentCrudWithSQLite.dll
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.pdb
+C:\Users\patrick.fonseca\Desktop\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\ref\StudentCrudWithSQLite.dll
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.csproj.AssemblyReference.cache
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\EditStudentPage.xaml.g.cs
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\NewStudentPage.xaml.g.cs
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\StudentDetailPage.xaml.g.cs
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\StudentListPage.xaml.g.cs
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.AssemblyInfoInputs.cache
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.AssemblyInfo.cs
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.csproj.CoreCompileInputs.cache
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.dll
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\refint\StudentCrudWithSQLite.dll
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.pdb
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\bin\Debug\netstandard2.0\StudentCrudWithSQLite.deps.json
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\bin\Debug\netstandard2.0\StudentCrudWithSQLite.dll
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\bin\Debug\netstandard2.0\StudentCrudWithSQLite.pdb
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Patri\OneDrive\Área de Trabalho\CRUD_SQLite_Xamarin_Forms\StudentCrudWithSQLite\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\ref\StudentCrudWithSQLite.dll
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\bin\Debug\netstandard2.0\StudentCrudWithSQLite.deps.json
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\bin\Debug\netstandard2.0\StudentCrudWithSQLite.dll
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\bin\Debug\netstandard2.0\StudentCrudWithSQLite.pdb
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.csproj.AssemblyReference.cache
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\EditStudentPage.xaml.g.cs
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\NewStudentPage.xaml.g.cs
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\StudentDetailPage.xaml.g.cs
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\Views\StudentListPage.xaml.g.cs
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.AssemblyInfoInputs.cache
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.AssemblyInfo.cs
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.csproj.CoreCompileInputs.cache
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.dll
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\refint\StudentCrudWithSQLite.dll
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\StudentCrudWithSQLite.pdb
+C:\Users\Patri\teste\StudentCrudWithSQLite\StudentCrudWithSQLite\obj\Debug\netstandard2.0\ref\StudentCrudWithSQLite.dll

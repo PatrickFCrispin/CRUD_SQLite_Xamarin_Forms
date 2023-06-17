@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:StudentCrudWithSQLite.Converters"
+             xmlns:model="clr-namespace:StudentCrudWithSQLite.Models"
+             xmlns:local="clr-namespace:StudentCrudWithSQLite.ViewModels"
+             x:DataType="local:StudentListViewModel"
+             x:Class="StudentCrudWithSQLite.Views.StudentListPage"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:InverseBoolConverter x:Key="InverseBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adicionar" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10">
+            <Label IsVisible="{Binding IsListEmpty}" 
+                   Text="{Binding ListEmptyMessage}" 
+                   FontSize="Medium" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="CenterAndExpand" />
+
+            <RefreshView IsVisible="{Binding IsListEmpty, Converter={StaticResource InverseBoolConverter}}" x:DataType="local:StudentListViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+                <CollectionView ItemsSource="{Binding Items}" 
+                                SelectionMode="None" 
+                                HorizontalOptions="Start" 
+                                VerticalOptions="FillAndExpand">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout x:DataType="model:Student" Margin="0, 20">
+                                <Label Text="{Binding Name}" 
+                                       LineBreakMode="NoWrap" 
+                                       Style="{DynamicResource ListItemTextStyle}" 
+                                       FontSize="Medium" />
+                                <Label Text="{Binding Email}" 
+                                       LineBreakMode="NoWrap" 
+                                       Style="{DynamicResource ListItemDetailTextStyle}" 
+                                       FontSize="Small" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" 
+                                                          Command="{Binding Source={RelativeSource AncestorType={x:Type local:StudentListViewModel}}, Path=ItemTapped}" 
+                                                          CommandParameter="{Binding .}">
+                                    </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
