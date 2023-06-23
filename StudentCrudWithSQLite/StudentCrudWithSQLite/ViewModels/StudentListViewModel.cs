@@ -52,7 +52,6 @@ namespace StudentCrudWithSQLite.ViewModels
                 {
                     IsListEmpty = true;
                     ListEmptyMessage = Messages.ListEmpty;
-                    IsBusy = false;
                     return;
                 }
 
