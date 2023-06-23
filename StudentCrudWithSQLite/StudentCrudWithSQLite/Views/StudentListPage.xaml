@@ -19,40 +19,43 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout Spacing="10" Padding="10">
+        <StackLayout>
             <Label IsVisible="{Binding IsListEmpty}" 
                    Text="{Binding ListEmptyMessage}" 
-                   FontSize="Medium" 
+                   FontSize="16" 
                    HorizontalOptions="Center" 
                    VerticalOptions="CenterAndExpand" />
 
-            <RefreshView IsVisible="{Binding IsListEmpty, Converter={StaticResource InverseBoolConverter}}" x:DataType="local:StudentListViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
-                <CollectionView ItemsSource="{Binding Items}" 
-                                SelectionMode="None" 
-                                HorizontalOptions="Start" 
-                                VerticalOptions="FillAndExpand">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout x:DataType="model:Student" Margin="0, 20">
-                                <Label Text="{Binding Name}" 
-                                       LineBreakMode="NoWrap" 
-                                       Style="{DynamicResource ListItemTextStyle}" 
-                                       FontSize="Medium" />
-                                <Label Text="{Binding Email}" 
-                                       LineBreakMode="NoWrap" 
-                                       Style="{DynamicResource ListItemDetailTextStyle}" 
-                                       FontSize="Small" />
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer NumberOfTapsRequired="1" 
-                                                          Command="{Binding Source={RelativeSource AncestorType={x:Type local:StudentListViewModel}}, Path=ItemTapped}" 
-                                                          CommandParameter="{Binding .}">
-                                    </TapGestureRecognizer>
-                                </StackLayout.GestureRecognizers>
-                            </StackLayout>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </RefreshView>
+            <ListView IsVisible="{Binding IsListEmpty, Converter={StaticResource InverseBoolConverter}}" 
+                      ItemsSource="{Binding Items}" 
+                      SelectionMode="None" 
+                      IsPullToRefreshEnabled="True" 
+                      RefreshCommand="{Binding LoadItemsCommand}" 
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}" 
+                      HorizontalOptions="Start" 
+                      VerticalOptions="FillAndExpand" 
+                      RowHeight="60">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout x:DataType="model:Student" Padding="20">
+                                    <Label Text="{Binding Name}" 
+                                           LineBreakMode="NoWrap" 
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1" 
+                                                              Command="{Binding Source={RelativeSource AncestorType={x:Type local:StudentListViewModel}}, Path=ItemTapped}" 
+                                                              CommandParameter="{Binding .}">
+                                        </TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 

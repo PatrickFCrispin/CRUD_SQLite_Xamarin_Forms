@@ -9,7 +9,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding DevelopedBy}" 
-                   FontSize="Medium" 
+                   FontSize="16" 
                    HorizontalOptions="Center" 
                    VerticalOptions="CenterAndExpand" />
         </StackLayout>
