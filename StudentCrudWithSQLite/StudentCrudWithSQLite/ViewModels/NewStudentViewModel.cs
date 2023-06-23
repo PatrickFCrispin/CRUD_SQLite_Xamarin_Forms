@@ -18,6 +18,10 @@ namespace StudentCrudWithSQLite.ViewModels
 
         private async Task OnSaveAsync()
         {
+            if (IsBusy) { return; }
+
+            IsBusy = true;
+
             var student = new Student
             {
                 Id = Guid.NewGuid().ToString(),
@@ -41,6 +45,7 @@ namespace StudentCrudWithSQLite.ViewModels
             {
                 await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
             }
+            finally { IsBusy = false; }
         }
 
         private static class Messages

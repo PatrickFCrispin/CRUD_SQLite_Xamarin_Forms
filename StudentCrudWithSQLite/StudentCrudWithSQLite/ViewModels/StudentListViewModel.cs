@@ -62,10 +62,7 @@ namespace StudentCrudWithSQLite.ViewModels
             {
                 await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
             }
-            finally
-            {
-                IsBusy = false;
-            }
+            finally { IsBusy = false; }
         }
 
         private void HandleSuccessfulLoadingOf(IEnumerable<Student> students)

@@ -21,6 +21,10 @@ namespace StudentCrudWithSQLite.ViewModels
 
         private async Task LoadStudentByAsync(string id)
         {
+            if (IsBusy) { return; }
+
+            IsBusy = true;
+
             try
             {
                 var student = await StudentStore.GetStudentByAsync(id);
@@ -35,10 +39,15 @@ namespace StudentCrudWithSQLite.ViewModels
                 await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
                 await GoToRouteAsync($"{nameof(StudentDetailPage)}?{nameof(Id)}={Id}");
             }
+            finally { IsBusy = false; }
         }
 
         private async Task OnSaveAsync()
         {
+            if (IsBusy) { return; }
+
+            IsBusy = true;
+
             var student = new Student
             {
                 Id = Id,
@@ -62,6 +71,7 @@ namespace StudentCrudWithSQLite.ViewModels
             {
                 await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
             }
+            finally { IsBusy = false; }
         }
 
         private static class Messages
