@@ -12,11 +12,11 @@ namespace StudentCrudWithSQLite.ViewModels
         public EditStudentViewModel()
         {
             Title = "Edição";
+            BackCommand = new Command(async () => await GoToRouteAsync($"{nameof(StudentDetailPage)}?{nameof(Id)}={Id}"));
             LoadItemsCommand = new Command(async () => await LoadStudentByAsync(Id));
             CancelCommand = new Command(async () => await GoToRouteAsync($"//{nameof(StudentListPage)}"));
             SaveCommand = new Command(async () => await OnSaveAsync(), ValidateSave);
             PropertyChanged += (_, __) => SaveCommand.ChangeCanExecute();
-            BackCommand = new Command(async () => await GoToRouteAsync($"{nameof(StudentDetailPage)}?{nameof(Id)}={Id}"));
         }
 
         private async Task LoadStudentByAsync(string id)

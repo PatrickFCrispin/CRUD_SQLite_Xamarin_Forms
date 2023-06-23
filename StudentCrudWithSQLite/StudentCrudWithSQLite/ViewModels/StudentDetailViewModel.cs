@@ -14,10 +14,10 @@ namespace StudentCrudWithSQLite.ViewModels
         public StudentDetailViewModel()
         {
             Title = "Detalhes";
+            BackCommand = new Command(async () => await GoToRouteAsync($"//{nameof(StudentListPage)}"));
             LoadItemsCommand = new Command(async () => await LoadStudentByAsync(Id));
             RemoveCommand = new Command(async () => await OnRemoveAsync());
             EditCommand = new Command(async () => await GoToRouteAsync($"{nameof(EditStudentPage)}?{nameof(Id)}={Id}"));
-            BackCommand = new Command(async () => await GoToRouteAsync($"//{nameof(StudentListPage)}"));
         }
 
         private async Task LoadStudentByAsync(string id)
