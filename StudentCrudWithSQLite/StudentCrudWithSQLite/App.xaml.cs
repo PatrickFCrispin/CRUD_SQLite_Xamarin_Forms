@@ -6,14 +6,13 @@ namespace StudentCrudWithSQLite
 {
     public partial class App : Application
     {
-
         public App()
         {
             InitializeComponent();
 
             DependencyService.Register<StudentDataStore>();
             DependencyService.Register<DataBase>();
-            
+
             MainPage = new AppShell();
         }
 

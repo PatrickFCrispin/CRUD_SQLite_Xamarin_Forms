@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UHxJK06rJTqsYPuMJ7+ZGR0X4td6ro6feZCYAbP9q6euCh4Xroxj2M5wRuELctnysUcUJjLfn7ZyPGKD8Wp+Ww==",
+  "dgSpecHash": "PmGvjgKZgjZ/kVc15VDY/gVsPC0JBoFK9OdOjPvnKAnjMUrLw6Fq9hO9HkWVzB8Vid2EfJLQo8Sq9ZCgAJBvbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj",
+  "projectFilePath": "C:\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Patri\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Patri\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

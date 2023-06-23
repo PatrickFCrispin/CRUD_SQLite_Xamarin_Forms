@@ -15,7 +15,7 @@
             <Label Text="Nome" FontSize="Medium" />
             <Entry Text="{Binding Name, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="E-mail" FontSize="Medium" />
-            <Editor Text="{Binding Email, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <Editor Text="{Binding Email, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Cancelar" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
                 <Button Text="Salvar" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand" />

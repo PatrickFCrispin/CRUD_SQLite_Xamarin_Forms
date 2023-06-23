@@ -64,7 +64,7 @@ namespace StudentCrudWithSQLite.ViewModels
             return !string.IsNullOrWhiteSpace(Name) && !string.IsNullOrWhiteSpace(Email);
         }
 
-        protected bool SetProperty<T>(ref T backingStore, T value, 
+        protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "", Action onChanged = null)
         {
             if (EqualityComparer<T>.Default.Equals(backingStore, value)) { return false; }

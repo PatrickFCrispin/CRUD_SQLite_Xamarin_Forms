@@ -1592,11 +1592,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.iOS\\StudentCrudWithSQLite.iOS.csproj",
+      "projectUniqueName": "C:\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.iOS\\StudentCrudWithSQLite.iOS.csproj",
       "projectName": "StudentCrudWithSQLite.iOS",
-      "projectPath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.iOS\\StudentCrudWithSQLite.iOS.csproj",
+      "projectPath": "C:\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.iOS\\StudentCrudWithSQLite.iOS.csproj",
       "packagesPath": "C:\\Users\\Patri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.iOS\\obj\\",
+      "outputPath": "C:\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1618,8 +1618,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj": {
-              "projectPath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj"
+            "C:\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj": {
+              "projectPath": "C:\\CRUD_SQLite_Xamarin_Forms\\StudentCrudWithSQLite\\StudentCrudWithSQLite\\StudentCrudWithSQLite.csproj"
             }
           }
         }
