@@ -22,16 +22,14 @@ namespace StudentCrudWithSQLite.ViewModels
 
             IsBusy = true;
 
-            var student = new Student
-            {
-                Id = Guid.NewGuid().ToString(),
-                Name = Name,
-                Email = Email
-            };
-
             try
             {
-                var success = await StudentStore.NewStudentAsync(student);
+                var success = StudentStore.NewStudent(new Student
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = Name,
+                    Email = Email
+                });
                 if (!success)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToAddStudent, "OK");

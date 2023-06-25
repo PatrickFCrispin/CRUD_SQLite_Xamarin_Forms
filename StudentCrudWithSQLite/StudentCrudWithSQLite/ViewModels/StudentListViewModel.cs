@@ -47,7 +47,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var students = await StudentStore.GetAllStudentsAsync();
+                var students = StudentStore.GetStudents();
                 if (!students.Any())
                 {
                     IsListEmpty = true;

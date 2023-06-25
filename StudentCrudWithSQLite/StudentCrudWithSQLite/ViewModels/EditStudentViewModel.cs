@@ -27,7 +27,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var student = await StudentStore.GetStudentByAsync(id);
+                var student = StudentStore.GetStudentBy(id);
                 if (student != null)
                 {
                     Name = student.Name;
@@ -48,16 +48,14 @@ namespace StudentCrudWithSQLite.ViewModels
 
             IsBusy = true;
 
-            var student = new Student
-            {
-                Id = Id,
-                Name = Name,
-                Email = Email
-            };
-
             try
             {
-                var success = await StudentStore.UpdateStudentAsync(student);
+                var success = StudentStore.UpdateStudent(new Student
+                {
+                    Id = Id,
+                    Name = Name,
+                    Email = Email
+                });
                 if (!success)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToUpdateStudent, "OK");

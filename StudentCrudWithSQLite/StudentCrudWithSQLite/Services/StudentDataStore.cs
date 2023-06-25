@@ -3,7 +3,6 @@ using StudentCrudWithSQLite.DataBases;
 using StudentCrudWithSQLite.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace StudentCrudWithSQLite.Services
@@ -18,73 +17,55 @@ namespace StudentCrudWithSQLite.Services
             _sQLiteConnection.CreateTable<Student>();
         }
 
-        public Task<bool> NewStudentAsync(Student student)
+        public bool NewStudent(Student student)
         {
             try
             {
                 var result = _sQLiteConnection.Insert(student);
-                if (result == 0)
-                {
-                    return Task.FromResult(false);
-                }
+                if (result == 0) { return false; }
 
-                return Task.FromResult(true);
+                return true;
             }
             catch (SQLiteException) { throw; }
         }
 
-        public Task<Student> GetStudentByAsync(string id)
+        public Student GetStudentBy(string id)
         {
             try
             {
-                //Podemos fazer de duas formas o 'get':
-                //1
-                //var result = _sQLiteConnection.Get<Student>(id);
-
-                //2
-                var result = _sQLiteConnection.Query<Student>("SELECT * FROM Student Where Id=?", id).FirstOrDefault();
-
-                return Task.FromResult(result);
+                //return _sQLiteConnection.Get<Student>(id);
+                return _sQLiteConnection.Query<Student>("SELECT * FROM Student Where Id=?", id).FirstOrDefault();
             }
             catch (SQLiteException) { throw; }
         }
 
-        public Task<bool> RemoveStudentAsync(string id)
+        public bool RemoveStudent(string id)
         {
             try
             {
                 var result = _sQLiteConnection.Delete<Student>(id);
-                if (result == 0)
-                {
-                    return Task.FromResult(false);
-                }
+                if (result == 0) { return false; }
 
-                return Task.FromResult(true);
+                return true;
             }
             catch (SQLiteException) { throw; }
         }
 
-        public Task<bool> UpdateStudentAsync(Student student)
+        public bool UpdateStudent(Student student)
         {
             try
             {
                 var result = _sQLiteConnection.Update(student);
-                if (result == 0)
-                {
-                    return Task.FromResult(false);
-                }
+                if (result == 0) { return false; }
 
-                return Task.FromResult(true);
+                return true;
             }
             catch (SQLiteException) { throw; }
         }
 
-        public async Task<IEnumerable<Student>> GetAllStudentsAsync()
+        public IEnumerable<Student> GetStudents()
         {
-            //var result = _sQLiteConnection.Table<Student>().ToList();
-            var result = _sQLiteConnection.Query<Student>("SELECT * FROM Student");
-
-            return await Task.FromResult(result);
+            return _sQLiteConnection.Query<Student>("SELECT * FROM Student");
         }
     }
 }

@@ -28,7 +28,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var student = await StudentStore.GetStudentByAsync(id);
+                var student = StudentStore.GetStudentBy(id);
                 if (student != null)
                 {
                     Name = student.Name;
@@ -54,7 +54,7 @@ namespace StudentCrudWithSQLite.ViewModels
                 var success = await Shell.Current.DisplayAlert("INFO", Messages.WantToRemoveStudent, "OK", "Cancelar");
                 if (!success) { return; }
 
-                success = await StudentStore.RemoveStudentAsync(Id);
+                success = StudentStore.RemoveStudent(Id);
                 if (!success)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToRemoveStudent, "OK");
