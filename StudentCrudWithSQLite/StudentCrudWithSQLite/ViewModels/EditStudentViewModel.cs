@@ -28,16 +28,19 @@ namespace StudentCrudWithSQLite.ViewModels
             try
             {
                 var student = StudentStore.GetStudentBy(id);
-                if (student != null)
+                if (student is null)
                 {
-                    Name = student.Name;
-                    Email = student.Email;
+                    await Shell.Current.DisplayAlert("ERRO", Messages.UnableToGetStudent, "OK");
+                    await GoToRouteAsync($"//{nameof(StudentListPage)}");
+                    return;
                 }
+
+                Name = student.Name;
+                Email = student.Email;
             }
             catch (Exception ex)
             {
                 await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
-                await GoToRouteAsync($"{nameof(StudentDetailPage)}?{nameof(Id)}={Id}");
             }
             finally { IsBusy = false; }
         }
@@ -50,12 +53,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var success = StudentStore.UpdateStudent(new Student
-                {
-                    Id = Id,
-                    Name = Name,
-                    Email = Email
-                });
+                var success = StudentStore.UpdateStudent(new Student { Id = Id, Name = Name, Email = Email });
                 if (!success)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToUpdateStudent, "OK");
@@ -74,7 +72,8 @@ namespace StudentCrudWithSQLite.ViewModels
 
         private static class Messages
         {
-            public const string UnableToUpdateStudent = "Ocorreu um erro ao atualizar o aluno.";
+            public const string UnableToGetStudent = "Não foi possível recuperar os dados do aluno.";
+            public const string UnableToUpdateStudent = "Não foi possível atualizar o aluno.";
             public const string StudentSuccessfullyUpdated = "Aluno atualizado com sucesso!";
         }
     }

@@ -1,2 +1,2 @@
-AdbTarget=
+AdbTarget=-s RX8TB03136P
 AdbOptions=

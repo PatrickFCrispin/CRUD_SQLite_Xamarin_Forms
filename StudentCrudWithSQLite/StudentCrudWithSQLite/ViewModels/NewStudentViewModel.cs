@@ -24,12 +24,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var success = StudentStore.NewStudent(new Student
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    Name = Name,
-                    Email = Email
-                });
+                var success = StudentStore.NewStudent(new Student { Id = Guid.NewGuid().ToString(), Name = Name, Email = Email });
                 if (!success)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToAddStudent, "OK");
@@ -48,8 +43,8 @@ namespace StudentCrudWithSQLite.ViewModels
 
         private static class Messages
         {
-            public const string UnableToAddStudent = "Ocorreu um erro ao adicionar o aluno.";
-            public const string StudentSuccessfullyAdded = "Aluno criado e adicionado com sucesso!";
+            public const string UnableToAddStudent = "Não foi possível adicionar o aluno.";
+            public const string StudentSuccessfullyAdded = "Aluno adicionado com sucesso!";
         }
     }
 }

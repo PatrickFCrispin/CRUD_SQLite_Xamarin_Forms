@@ -29,16 +29,19 @@ namespace StudentCrudWithSQLite.ViewModels
             try
             {
                 var student = StudentStore.GetStudentBy(id);
-                if (student != null)
+                if (student is null)
                 {
-                    Name = student.Name;
-                    Email = student.Email;
+                    await Shell.Current.DisplayAlert("ERRO", Messages.UnableToGetStudent, "OK");
+                    await GoToRouteAsync($"//{nameof(StudentListPage)}");
+                    return;
                 }
+
+                Name = student.Name;
+                Email = student.Email;
             }
             catch (Exception ex)
             {
                 await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
-                await GoToRouteAsync($"//{nameof(StudentListPage)}");
             }
             finally { IsBusy = false; }
         }
@@ -51,7 +54,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var success = await Shell.Current.DisplayAlert("INFO", Messages.WantToRemoveStudent, "OK", "Cancelar");
+                var success = await Shell.Current.DisplayAlert("INFO", Messages.AsksIfWantToRemoveStudent, "OK", "Cancelar");
                 if (!success) { return; }
 
                 success = StudentStore.RemoveStudent(Id);
@@ -73,8 +76,9 @@ namespace StudentCrudWithSQLite.ViewModels
 
         private static class Messages
         {
-            public const string WantToRemoveStudent = "Tem certeza que deseja remover este aluno?";
-            public const string UnableToRemoveStudent = "Ocorreu um erro ao remover o aluno.";
+            public const string UnableToGetStudent = "Não foi possível recuperar os dados do aluno.";
+            public const string AsksIfWantToRemoveStudent = "Tem certeza que deseja remover este aluno?";
+            public const string UnableToRemoveStudent = "Não foi possível remover o aluno.";
             public const string StudentSuccessfullyRemoved = "Aluno removido com sucesso!";
         }
     }
