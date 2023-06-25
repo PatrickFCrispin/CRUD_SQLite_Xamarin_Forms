@@ -65,7 +65,11 @@ namespace StudentCrudWithSQLite.Services
 
         public IEnumerable<Student> GetStudents()
         {
-            return _sQLiteConnection.Query<Student>("SELECT * FROM Student");
+            try
+            {
+                return _sQLiteConnection.Query<Student>("SELECT * FROM Student");
+            }
+            catch (SQLiteException) { throw; }
         }
     }
 }
