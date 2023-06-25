@@ -10,8 +10,8 @@ namespace StudentCrudWithSQLite
         {
             InitializeComponent();
 
-            DependencyService.Register<StudentDataStore>();
-            DependencyService.Register<DataBase>();
+            DependencyService.Register<IStudentStore, StudentDataStore>();
+            DependencyService.Register<IDataBase, DataBase>();
 
             MainPage = new AppShell();
         }
