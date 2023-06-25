@@ -3,6 +3,7 @@
     public class AboutViewModel : BaseViewModel
     {
         private string _developedBy;
+
         public string DevelopedBy
         {
             get => _developedBy;

@@ -1,4 +1,5 @@
-﻿using StudentCrudWithSQLite.ViewModels;
+﻿using StudentCrudWithSQLite.Services;
+using StudentCrudWithSQLite.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace StudentCrudWithSQLite.Views
         {
             InitializeComponent();
 
-            BindingContext = new NewStudentViewModel();
+            BindingContext = new NewStudentViewModel(DependencyService.Get<IStudentStore>());
         }
     }
 }

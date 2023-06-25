@@ -1,4 +1,5 @@
 ﻿using StudentCrudWithSQLite.Models;
+using StudentCrudWithSQLite.Services;
 using StudentCrudWithSQLite.Views;
 using System;
 using System.Threading.Tasks;
@@ -8,8 +9,11 @@ namespace StudentCrudWithSQLite.ViewModels
 {
     public class NewStudentViewModel : BaseViewModel
     {
-        public NewStudentViewModel()
+        private readonly IStudentStore _studentStore;
+
+        public NewStudentViewModel(IStudentStore studentStore)
         {
+            _studentStore = studentStore;
             Title = "Novo aluno";
             CancelCommand = new Command(async () => await GoToRouteAsync($"//{nameof(StudentListPage)}"));
             SaveCommand = new Command(async () => await OnSaveAsync(), ValidateSave);
@@ -24,7 +28,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var success = StudentStore.NewStudent(new Student { Id = Guid.NewGuid().ToString(), Name = Name, Email = Email });
+                var success = _studentStore.NewStudent(new Student { Id = Guid.NewGuid().ToString(), Name = Name, Email = Email });
                 if (!success)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToAddStudent, "OK");

@@ -1,5 +1,4 @@
-﻿using StudentCrudWithSQLite.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -15,8 +14,6 @@ namespace StudentCrudWithSQLite.ViewModels
         private string _id;
         private string _name;
         private string _email;
-
-        public IStudentStore StudentStore => DependencyService.Get<IStudentStore>();
 
         public bool IsBusy
         {

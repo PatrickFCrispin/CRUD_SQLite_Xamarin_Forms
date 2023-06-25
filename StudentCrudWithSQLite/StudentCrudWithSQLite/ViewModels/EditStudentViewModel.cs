@@ -1,4 +1,5 @@
 ﻿using StudentCrudWithSQLite.Models;
+using StudentCrudWithSQLite.Services;
 using StudentCrudWithSQLite.Views;
 using System;
 using System.Threading.Tasks;
@@ -9,8 +10,11 @@ namespace StudentCrudWithSQLite.ViewModels
     [QueryProperty(nameof(Id), nameof(Id))]
     public class EditStudentViewModel : BaseViewModel
     {
-        public EditStudentViewModel()
+        private readonly IStudentStore _studentStore;
+
+        public EditStudentViewModel(IStudentStore studentStore)
         {
+            _studentStore = studentStore;
             Title = "Edição";
             BackCommand = new Command(async () => await GoToRouteAsync($"{nameof(StudentDetailPage)}?{nameof(Id)}={Id}"));
             LoadItemsCommand = new Command(async () => await LoadStudentByAsync(Id));
@@ -27,7 +31,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var student = StudentStore.GetStudentBy(id);
+                var student = _studentStore.GetStudentBy(id);
                 if (student is null)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToGetStudent, "OK");
@@ -53,7 +57,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var success = StudentStore.UpdateStudent(new Student { Id = Id, Name = Name, Email = Email });
+                var success = _studentStore.UpdateStudent(new Student { Id = Id, Name = Name, Email = Email });
                 if (!success)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToUpdateStudent, "OK");

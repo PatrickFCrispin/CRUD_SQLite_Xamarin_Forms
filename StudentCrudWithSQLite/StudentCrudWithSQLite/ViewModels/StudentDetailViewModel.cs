@@ -1,4 +1,5 @@
-﻿using StudentCrudWithSQLite.Views;
+﻿using StudentCrudWithSQLite.Services;
+using StudentCrudWithSQLite.Views;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -8,11 +9,13 @@ namespace StudentCrudWithSQLite.ViewModels
     [QueryProperty(nameof(Id), nameof(Id))]
     public class StudentDetailViewModel : BaseViewModel
     {
+        private readonly IStudentStore _studentStore;
         public Command RemoveCommand { get; }
         public Command EditCommand { get; }
 
-        public StudentDetailViewModel()
+        public StudentDetailViewModel(IStudentStore studentStore)
         {
+            _studentStore = studentStore;
             Title = "Detalhes";
             BackCommand = new Command(async () => await GoToRouteAsync($"//{nameof(StudentListPage)}"));
             LoadItemsCommand = new Command(async () => await LoadStudentByAsync(Id));
@@ -28,7 +31,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var student = StudentStore.GetStudentBy(id);
+                var student = _studentStore.GetStudentBy(id);
                 if (student is null)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToGetStudent, "OK");
@@ -57,7 +60,7 @@ namespace StudentCrudWithSQLite.ViewModels
                 var success = await Shell.Current.DisplayAlert("INFO", Messages.AsksIfWantToRemoveStudent, "OK", "Cancelar");
                 if (!success) { return; }
 
-                success = StudentStore.RemoveStudent(Id);
+                success = _studentStore.RemoveStudent(Id);
                 if (!success)
                 {
                     await Shell.Current.DisplayAlert("ERRO", Messages.UnableToRemoveStudent, "OK");

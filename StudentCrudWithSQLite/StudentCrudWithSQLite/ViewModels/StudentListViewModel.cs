@@ -1,4 +1,5 @@
 ﻿using StudentCrudWithSQLite.Models;
+using StudentCrudWithSQLite.Services;
 using StudentCrudWithSQLite.Views;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace StudentCrudWithSQLite.ViewModels
 {
     public class StudentListViewModel : BaseViewModel
     {
+        private readonly IStudentStore _studentStore;
         private bool _isListEmpty;
         private string _listEmptyMessage;
 
@@ -30,8 +32,9 @@ namespace StudentCrudWithSQLite.ViewModels
         public Command<Student> ItemTapped { get; }
         public Command AddItemCommand { get; }
 
-        public StudentListViewModel()
+        public StudentListViewModel(IStudentStore studentStore)
         {
+            _studentStore = studentStore;
             Title = "Alunos";
             Items = new ObservableCollection<Student>();
             LoadItemsCommand = new Command(async () => await LoadStudentListAsync());
@@ -47,7 +50,7 @@ namespace StudentCrudWithSQLite.ViewModels
 
             try
             {
-                var students = StudentStore.GetStudents();
+                var students = _studentStore.GetStudents();
                 if (!students.Any())
                 {
                     IsListEmpty = true;

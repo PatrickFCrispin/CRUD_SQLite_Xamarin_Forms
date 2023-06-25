@@ -1,4 +1,5 @@
-﻿using StudentCrudWithSQLite.ViewModels;
+﻿using StudentCrudWithSQLite.Services;
+using StudentCrudWithSQLite.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,13 +8,13 @@ namespace StudentCrudWithSQLite.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditStudentPage : ContentPage
     {
-        readonly EditStudentViewModel _viewModel;
+        private readonly EditStudentViewModel _viewModel;
 
         public EditStudentPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new EditStudentViewModel();
+            BindingContext = _viewModel = new EditStudentViewModel(DependencyService.Get<IStudentStore>());
         }
 
         protected override void OnAppearing()
