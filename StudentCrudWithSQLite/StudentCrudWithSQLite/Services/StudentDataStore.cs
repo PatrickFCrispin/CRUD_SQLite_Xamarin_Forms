@@ -22,9 +22,7 @@ namespace StudentCrudWithSQLite.Services
             try
             {
                 var result = _sQLiteConnection.Insert(student);
-                if (result == 0) { return false; }
-
-                return true;
+                return result > 0;
             }
             catch (SQLiteException) { throw; }
         }
@@ -44,9 +42,7 @@ namespace StudentCrudWithSQLite.Services
             try
             {
                 var result = _sQLiteConnection.Delete<Student>(id);
-                if (result == 0) { return false; }
-
-                return true;
+                return result > 0;
             }
             catch (SQLiteException) { throw; }
         }
@@ -56,9 +52,7 @@ namespace StudentCrudWithSQLite.Services
             try
             {
                 var result = _sQLiteConnection.Update(student);
-                if (result == 0) { return false; }
-
-                return true;
+                return result > 0;
             }
             catch (SQLiteException) { throw; }
         }

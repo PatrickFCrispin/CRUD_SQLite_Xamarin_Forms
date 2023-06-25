@@ -10,7 +10,7 @@ namespace StudentCrudWithSQLite.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         private bool _isBusy;
-        private string _title = string.Empty;
+        private string _title;
         private string _id;
         private string _name;
         private string _email;
