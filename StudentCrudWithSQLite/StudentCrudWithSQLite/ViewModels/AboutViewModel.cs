@@ -2,13 +2,7 @@
 {
     public class AboutViewModel : BaseViewModel
     {
-        private string _developedBy;
-
-        public string DevelopedBy
-        {
-            get => _developedBy;
-            private set { SetProperty(ref _developedBy, value); }
-        }
+        public string DevelopedBy { get; }
 
         public AboutViewModel()
         {

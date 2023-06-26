@@ -2,9 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="clr-namespace:StudentCrudWithSQLite.Converters"
-             xmlns:model="clr-namespace:StudentCrudWithSQLite.Models"
-             xmlns:local="clr-namespace:StudentCrudWithSQLite.ViewModels"
-             x:DataType="local:StudentListViewModel"
+             xmlns:viewmodels="clr-namespace:StudentCrudWithSQLite.ViewModels"
              x:Class="StudentCrudWithSQLite.Views.StudentListPage"
              Title="{Binding Title}">
 
@@ -13,6 +11,10 @@
             <xct:InverseBoolConverter x:Key="InverseBoolConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <viewmodels:StudentListViewModel />
+    </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Adicionar" Command="{Binding AddItemCommand}" />
@@ -39,14 +41,14 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <StackLayout x:DataType="model:Student" Padding="20">
+                                <StackLayout Padding="20">
                                     <Label Text="{Binding Name}" 
                                            LineBreakMode="NoWrap" 
                                            Style="{DynamicResource ListItemTextStyle}" 
                                            FontSize="16" />
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer NumberOfTapsRequired="1" 
-                                                              Command="{Binding Source={RelativeSource AncestorType={x:Type local:StudentListViewModel}}, Path=ItemTapped}" 
+                                                              Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:StudentListViewModel}}, Path=ItemTapped}" 
                                                               CommandParameter="{Binding .}">
                                         </TapGestureRecognizer>
                                     </StackLayout.GestureRecognizers>

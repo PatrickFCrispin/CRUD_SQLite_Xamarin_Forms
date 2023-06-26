@@ -42,6 +42,10 @@ namespace StudentCrudWithSQLite.ViewModels
             AddItemCommand = new Command(async () => await GoToRouteAsync(nameof(NewStudentPage)));
         }
 
+        public StudentListViewModel()
+        {
+        }
+
         private async Task LoadStudentListAsync()
         {
             if (IsBusy) { return; }

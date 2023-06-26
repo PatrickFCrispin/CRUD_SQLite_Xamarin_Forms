@@ -20,6 +20,10 @@ namespace StudentCrudWithSQLite.ViewModels
             PropertyChanged += (_, __) => SaveCommand.ChangeCanExecute();
         }
 
+        public NewStudentViewModel()
+        {
+        }
+
         private async Task OnSaveAsync()
         {
             if (IsBusy) { return; }

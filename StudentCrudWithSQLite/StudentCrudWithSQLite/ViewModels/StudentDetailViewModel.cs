@@ -10,6 +10,7 @@ namespace StudentCrudWithSQLite.ViewModels
     public class StudentDetailViewModel : BaseViewModel
     {
         private readonly IStudentStore _studentStore;
+
         public Command RemoveCommand { get; }
         public Command EditCommand { get; }
 
@@ -21,6 +22,10 @@ namespace StudentCrudWithSQLite.ViewModels
             LoadItemsCommand = new Command(async () => await LoadStudentByAsync(Id));
             RemoveCommand = new Command(async () => await OnRemoveAsync());
             EditCommand = new Command(async () => await GoToRouteAsync($"{nameof(EditStudentPage)}?{nameof(Id)}={Id}"));
+        }
+
+        public StudentDetailViewModel()
+        {
         }
 
         private async Task LoadStudentByAsync(string id)
