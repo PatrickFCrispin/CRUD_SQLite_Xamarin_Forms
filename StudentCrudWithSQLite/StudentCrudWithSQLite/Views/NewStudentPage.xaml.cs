@@ -12,8 +12,7 @@ namespace StudentCrudWithSQLite.Views
         {
             InitializeComponent();
 
-            BindingContext = new NewStudentViewModel(
-                DependencyService.Get<IStudentStore>());
+            BindingContext = new NewStudentViewModel(DependencyService.Get<IStudentStore>());
         }
     }
 }

@@ -14,8 +14,7 @@ namespace StudentCrudWithSQLite.Views
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new StudentDetailViewModel(
-                DependencyService.Get<IStudentStore>());
+            BindingContext = _viewModel = new StudentDetailViewModel(DependencyService.Get<IStudentStore>());
         }
 
         protected override void OnAppearing()
